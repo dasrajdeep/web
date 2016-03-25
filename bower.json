@@ -1,0 +1,26 @@
+{
+  "name": "d33p.in",
+  "description": "My personal website",
+  "main": "index.js",
+  "authors": [
+    "Rajdeep Das <das.rajdeep97@gmail.com>"
+  ],
+  "license": "Apache",
+  "homepage": "http://raj.d33p.in",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.2",
+    "angular-material": "^1.0.6"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "d33p.in",
+  "version": "0.0.1",
+  "description": "My personal website",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.10.2"
+  }
+}
