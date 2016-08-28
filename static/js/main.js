@@ -6,3 +6,17 @@ var app = angular.module('d33p.in', ['ngMaterial'])
 		    .primaryPalette('teal')
 		    .accentPalette('green');
 	});
+
+app.controller('LayoutController', function($scope, $mdMedia) {
+	
+	$scope.height = window.innerHeight - 50;
+	$scope.imgWidth = Math.min( window.innerWidth, window.innerHeight ) / 3;
+	
+	$scope.partials = {
+		container: 'partials/container.html',
+		about: 'partials/about.html',
+		bio: 'partials/bio.html',
+		cv: 'partials/cv.html',
+		projects: 'partials/projects.html'
+	};
+});

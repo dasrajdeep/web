@@ -1,0 +1,32 @@
+<div layout="row" flex>
+
+	<div layout="column" flex="50" style="height: {{height}}px">
+		<div flex class="text-center">
+			<div style="padding-top: 30px">
+				<img width="{{imgWidth}}px" height="{{imgWidth}}px" src="img/profile_pic.jpg" class="img-circle">
+			</div>
+			<h1>
+				<span>Rajdeep Das</span>
+				<br>
+				<small>raj&#64d33p.in</small>
+			</h1>
+		</div>
+		<div style="margin-top: 40px" flex class="text-center">
+			<a class="social" href="https://www.facebook.com/das.rajdeep"><img src="img/icons/social-1_logo-facebook.svg" /></a>
+			<a class="social" href="https://github.com/dasrajdeep"><img src="img/icons/social-1_logo-github.svg" /></a>
+			<a class="social" href="https://plus.google.com/+RajdeepDasG33k"><img src="img/icons/social-1_logo-google-plus.svg" /></a>
+			<a class="social" href="https://in.linkedin.com/in/dasrajdeep97"><img src="img/icons/social-1_logo-linkedin.svg" /></a>
+			<a class="social" href="skype:retro.grade.97?call"><img src="img/icons/social-1_logo-skype.svg" /></a>
+			<a class="social" href="https://twitter.com/rajd33pd"><img src="img/icons/social-1_logo-twitter.svg" /></a>
+		</div>
+	</div>
+	
+	<div flex="50" layout-padding>
+		<md-content layout-padding class="bio">
+			<div class="jumbotron">
+				<h1 class="text-center">Hello There!</h1>
+			</div>
+			<p ng-include="partials.bio" class="text-justify"></p>
+		</md-content>
+	</div>
+</div>

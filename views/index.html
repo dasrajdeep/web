@@ -19,12 +19,18 @@
 	<script type="text/javascript" src="vendor/angular-animate/angular-animate.min.js"></script>
 	<script type="text/javascript" src="vendor/angular-material/angular-material.min.js"></script>
 	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	
 	<!-- Main -->
 	<link rel="stylesheet" href="css/main.css" />
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body ng-app="d33p.in">
+	<div ng-controller="LayoutController" layout="column">
+		<div layout="column" ng-include="partials.container"></div>
+	</div>
 </body>
 
 </html>

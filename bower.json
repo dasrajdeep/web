@@ -21,6 +21,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "angular": "^1.5.2",
-    "angular-material": "^1.0.6"
+    "angular-material": "^1.0.6",
+    "material-design-icons": "^2.2.3"
   }
 }
