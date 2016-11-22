@@ -1,0 +1,29 @@
+body {
+	background-color: white;
+	color: teal;
+	overflow-y: hidden;
+}
+
+.about-right, .about-right md-content {
+	background-color: #E0E0E0;
+	color: #777777;
+}
+
+.bio {
+	color: gray;
+	background-color: inherit;
+	text-align: center;
+}
+
+.jumbotron {
+	background-color: inherit;
+	color: inherit;
+}
+
+.material-icons {
+	font-size: medium;
+}
+
+.social {
+	padding: 15px;
+}
