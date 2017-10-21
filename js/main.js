@@ -17,6 +17,7 @@ app.controller('LayoutController', function($scope, $mdMedia) {
 		about: 'partials/about.html',
 		bio: 'partials/bio.html',
 		cv: 'partials/cv.html',
-		projects: 'partials/projects.html'
+		pindrop: 'partials/pindrop.html',
+		prutor: 'partials/prutor.html'
 	};
 });
