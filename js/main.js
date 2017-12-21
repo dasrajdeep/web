@@ -16,6 +16,7 @@ app.controller('LayoutController', function($scope, $mdMedia) {
 		container: 'partials/container.html',
 		about: 'partials/about.html',
 		bio: 'partials/bio.html',
+		publications: 'partials/publications.html',
 		cv: 'partials/cv.html',
 		pindrop: 'partials/pindrop.html',
 		prutor: 'partials/prutor.html'

@@ -27,3 +27,13 @@ body {
 .social {
 	padding: 15px;
 }
+
+.address {
+	color: #AAAAAA;
+	font-size: medium;
+	font-style: italic;
+}
+
+.bio-container {
+	background-color: #EEEEEE;
+}
