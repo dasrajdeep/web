@@ -1,11 +1,9 @@
 body {
 	background-color: white;
 	color: teal;
-	overflow-y: hidden;
 }
 
 .about-right, .about-right md-content {
-	background-color: #E0E0E0;
 	color: #777777;
 }
 
