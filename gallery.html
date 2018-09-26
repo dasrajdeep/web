@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Rajdeep Das</title>
+	
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<!-- Main -->
+	<link rel="stylesheet" href="css/main.css" />
+
+	<link rel="stylesheet" href="vendor/photoswipe.css">
+	<link rel="stylesheet" href="vendor/default-skin/default-skin.css">
+	<script src="vendor/photoswipe.js"></script>
+	<script src="vendor/photoswipe-ui-default.js"></script> 
+
+	<script type="text/javascript">
+		var items = [
+		    {
+		        src: 'img/gallery/01.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Mission Trails: South Fortuna Summit'
+		    },
+		    {
+		        src: 'img/gallery/02.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Lake Hodges'
+		    },
+		    {
+		        src: 'img/gallery/03.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Mount Laguna'
+		    },
+		    {
+		        src: 'img/gallery/04.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Trek Girls: El Cajone'
+		    },
+		    {
+		        src: 'img/gallery/05.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Highway 101'
+		    },
+		    {
+		        src: 'img/gallery/06.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Mission Trails: E-ticket'
+		    },
+		    {
+		        src: 'img/gallery/07.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Mission Bay'
+		    },
+		    {
+		        src: 'img/gallery/08.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'Julian: Mt. Vulcan'
+		    },
+		    {
+		        src: 'img/gallery/09.jpg',
+		        w: 3264,
+		        h: 2448,
+		        title: 'La Jolla Shores'
+		    }
+		];
+		$(document).ready(function() {
+			var thumbHeight = window.innerWidth / 8;
+			for(var i in items) {
+				var img = $('<img>')
+					.attr('height', thumbHeight + 'px')
+					.attr('src', items[i].src)
+					.addClass('img-rounded');
+				var link = $('<a>')
+					.attr('href', '')
+					.attr('id', 'img' + i)
+					.attr('title', items[i].title)
+					.attr('data-toggle', 'tooltip')
+					.click(function(e) {
+						e.preventDefault();
+						var id = parseInt($(this).attr('id').substring(3));
+						var pswpElement = document.querySelectorAll('.pswp')[0];
+						var options = { 'index': id };
+						var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+						gallery.init();
+					})
+					.append(img);
+				$('.thumbs').append(
+					$('<div>')
+						.addClass('col-md-4')
+						.addClass('text-center')
+						.css('padding', '10px')
+						.append(link)
+				);
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron text-center">
+			<h1>Hikes 'n Bikes!</h1>
+			<a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+			<hr>
+			<div class="thumbs"></div>
+		</div>
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+		        <div class="pswp__container">
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		        </div>
+		        <div class="pswp__ui pswp__ui--hidden">
+		            <div class="pswp__top-bar">
+		                <div class="pswp__counter"></div>
+		                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+		                <button class="pswp__button pswp__button--share" title="Share"></button>
+		                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+		                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+		                <div class="pswp__preloader">
+		                    <div class="pswp__preloader__icn">
+		                      <div class="pswp__preloader__cut">
+		                        <div class="pswp__preloader__donut"></div>
+		                      </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+		                <div class="pswp__share-tooltip"></div> 
+		            </div>
+		            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+		            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+		            <div class="pswp__caption">
+		                <div class="pswp__caption__center"></div>
+		            </div>
+		        </div>
+	    	</div>
+		</div>
+	</div>
+</body>
+
+</html>
