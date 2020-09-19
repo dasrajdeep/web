@@ -1,21 +1,32 @@
 body {
 	background-color: white;
-	color: teal;
+	color: #555555;
 }
 
-.about-right, .about-right md-content {
-	color: #777777;
+.container-fluid {
+	background-color: white;
 }
 
 .bio {
-	color: gray;
 	background-color: inherit;
-	text-align: center;
+}
+
+.publications {
+	font-size: medium;
 }
 
 .jumbotron {
 	background-color: inherit;
 	color: inherit;
+	margin-top: 0px;
+	padding-left: 20px; 
+	padding-right: 100px; 
+	padding-bottom: 50px; 
+	font-size: 24px;
+}
+
+.my-navs a {
+	text-decoration: none;
 }
 
 .material-icons {
@@ -30,8 +41,4 @@ body {
 	color: #AAAAAA;
 	font-size: medium;
 	font-style: italic;
-}
-
-.bio-container {
-	background-color: #EEEEEE;
 }

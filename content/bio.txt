@@ -1,0 +1,5 @@
+I am a PhD student in the <a href="http://www.sysnet.ucsd.edu/sysnet/">Systems and Networking</a> group at UC San Diego Computer Science and Engineering. My advisor is <a href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. My current research is about enabling active networking on programmable switch hardware. More details about my research can be found <a href="">here</a>. 
+
+In the past I have worked on the <a href="https://circuit-switching.sysnet.ucsd.edu/">RotorNet</a> project and datacenter fault detection at UCSD. Prior to joining UCSD, I have worked on improving quality of service of real-time streaming applications in the context of wide-area networks (WAN) and Wi-Fi networks. I have also worked on building educational technologies to help improve programming language education in university programs during my Masters program. 
+
+A link to my CV can be found <a href="http://www.sysnet.ucsd.edu/~r4das/docs/cv.pdf" target="_blank">here</a>.
