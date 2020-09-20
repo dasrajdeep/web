@@ -30,7 +30,7 @@
 <body ng-app="d33p.in">
 	<div ng-controller="LayoutController" class="container-fluid">
 
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<h2 class="text-right">
 				<div><img width="200px" height="200px" src="img/profile_pic_alt.jpg" class="img-rounded" style="margin-bottom: 20px"></div>
 				<span>Rajdeep Das</span>
@@ -56,12 +56,12 @@
 			</div>
 		</div>
 
-		<div class="col-md-8 jumbotron">
+		<div class="col-md-9 jumbotron">
 
 			<div class="bio" id="bio">
 				<h1>Bio</h1>
 
-				<p class="text-justify">I am a PhD student in the <a target="_blank" href="http://www.sysnet.ucsd.edu/sysnet/">Systems and Networking</a> group at the UC San Diego Computer Science and Engineering department. My advisor is <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. My current research is about enabling active networking on programmable switch hardware. More details about my current research can be found <a href="#research">below</a>.</p>
+				<p class="text-justify">I am a PhD student in the <a target="_blank" href="http://www.sysnet.ucsd.edu/sysnet/">Systems and Networking</a> group at the UC San Diego Computer Science and Engineering department. My advisor is <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. My current research goal is to enable active networking on programmable switches and fair sharing of switch hardware resources among active programs.</p>
 
 				<p class="text-justify">In the past, I have worked on the <a target="_blank" href="https://circuit-switching.sysnet.ucsd.edu/">RotorNet</a> project and datacenter fault detection at UCSD. Prior to joining UCSD, I was a part of the <a target="_blank" href="https://www.microsoft.com/en-us/research/project/pindrop/"> PinDrop</a> project at Microsoft Research India where I worked on improving quality of service of real-time streaming applications in the context of Wide-Area Networks (WAN) and Wi-Fi networks. During my Masters program at IIT Kanpur, I worked on building educational technologies to help improve programming language education in University programs.</p>
 	
@@ -73,11 +73,10 @@
 			<div class="text-justify" id="research">
 				<h1>Research</h1>
 				<div>
-					<p><b>Active Networking on Programmable Switches</b>. The concept of active networks is not new. Decades ago, there was a vision within the networking community that programs can be encoded within packets and run on devices within the forwarding path. The Active Node Transfer System (ANTS) was one of the more popular variants. However, the vision faded away with time (at least in part) due to a perceived lack of utility within the community as well as the unavailability of hardware well-suited to this task. That said, functionality continued to be implemented in the network till date using devices such as network processors. The cost of such devices is of course significantly higher than traditional packet forwarding devices such as switches and routers. The difference in cost is justified by the rich functionality offered through such means. Recent trends have however shifted towards programmable switching hardware revolutionized by <a target="_blank" href="https://www.barefootnetworks.com/">Barefoot Networks'</a> line of Tofino switches. These devices are currently capable of delivering around 12.8 Terabits/sec of throughput while being able to execute non-trivial functionality within the switch. Tofino switches and their associated toolchain have fueled the development of numerous in-network applications over the past few years. This observation has led us to believe that we can once again consider the utility of active networks in the context of programmable switches. Our goal in this project is to enable this multi-decade-old vision to become a consumable reality.</p>
-					<p>Our active network system is comprised of a dataplane runtime written in <a target="_blank" href="https://p4.org/">P4</a> that extracts, decodes and executes active programs from network packets. An agent running on the switch control plane manages memory and bandwidth across active programs sharing the switch.</p>
+					<p>I am building an <b>active networking</b> system which uses <b>programmable switches</b> to run programs encoded inside network packets. Our prototype runtime written using the <a target="_blank" href="https://p4.org/">P4</a> programming language, is designed to run on a <a target="_blank" href="https://www.barefootnetworks.com/">Barefoot</a> Tofino switch ASIC. An agent running on the switch CPU manages memory and bandwidth across active programs sharing the switch.</p>
 					<div class="text-center"><img src="img/activep4.png"></div>
 					<br>
-					<div class="text-center"><small><i><b>Figure:</b> System Abstraction for a Programmable Switch Based Active Networking</i></small></div>
+					<div class="text-center"><small><i><b>Figure:</b> System Abstraction</i></small></div>
 				</div>
 			</div>
 
