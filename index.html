@@ -55,7 +55,7 @@
 				</p>
 			</h2>
 			<h3 class="text-right my-navs">
-				<a href="#bio">bio</a>
+				<a href="#about">about</a>
 				.
 				<a href="#research">research</a>
 				.
@@ -69,8 +69,8 @@
 
 		<div class="col-md-9 jumbotron">
 
-			<div class="bio" id="bio">
-				<h1>Bio</h1>
+			<div class="about" id="about">
+				<h1>About</h1>
 
 				<p class="text-justify">I am a PhD student in the <a target="_blank" href="http://www.sysnet.ucsd.edu/sysnet/">Systems and Networking</a> group at the UC San Diego Computer Science and Engineering department. My advisor is <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. My current research goal is to enable active networking on programmable switches and fair sharing of switch hardware resources among active programs.</p>
 
@@ -84,7 +84,7 @@
 			<div class="text-justify" id="research">
 				<h1>Research</h1>
 				<div>
-					<p>I am building an <b>active networking</b> system which uses <b>programmable switches</b> to run programs encoded inside network packets. Our prototype runtime written using the <a target="_blank" href="https://p4.org/">P4</a> programming language, is designed to run on a <a target="_blank" href="https://www.barefootnetworks.com/">Barefoot</a> Tofino switch ASIC. An agent running on the switch CPU manages memory and bandwidth across active programs sharing the switch.</p>
+					<p>My current research involves building an <b>active networking</b> system which uses <b>RMT-based programmable switches</b> to run programs encoded inside network packets. The current prototype (written using the <a target="_blank" href="https://p4.org/">P4</a> programming language) is designed to run on a <a target="_blank" href="https://www.barefootnetworks.com/">Barefoot</a> Tofino switch ASIC. Multi-tenancy is supported along with resource isolation and dynamic adaptation of (memory and bandwidth) resources. Excess bandwidth is used to perform complex computation using packet re-circulations. Available memory is allocated among active applications based on pre-defined policies.</p>
 					<div class="text-center"><img src="img/activep4.png"></div>
 					<br>
 					<div class="text-center"><small><i><b>Figure:</b> System Abstraction</i></small></div>
