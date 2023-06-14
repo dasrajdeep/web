@@ -43,12 +43,12 @@
 
 		<div class="col-md-3">
 			<h2 class="text-right">
-				<div><img width="200px" height="200px" src="img/profile_pic_alt.jpg" class="img-rounded" style="margin-bottom: 20px"></div>
+				<div><img width="200px" height="200px" src="img/profile_pic.jpg" class="img-rounded" style="margin-bottom: 20px"></div>
 				<span>Rajdeep Das</span>
 				<br>
 				<small>r4das [at] ucsd [dot] edu</small>
 				<p class="address" style="margin-top: 30px">
-					EBU3B 3144 <br>
+					EBU3B 3142 <br>
 					Department of Computer Science and Engineering <br>
 					9500 Gilman Drive <br>
 					La Jolla, CA 92093-0404
@@ -62,7 +62,7 @@
 				<a href="#publications">publications</a>
 			</h3>
 			<div style="margin-top: 40px" class="text-right">
-				<a class="social" href="https://github.com/dasrajdeep"><img src="img/icons/social-1_logo-github.svg" /></a>
+				<!-- <a class="social" href="https://github.com/dasrajdeep"><img src="img/icons/social-1_logo-github.svg" /></a> -->
 				<a class="social" href="https://www.linkedin.com/in/rajd33pd"><img src="img/icons/social-1_logo-linkedin.svg" /></a>
 			</div>
 		</div>
@@ -72,58 +72,64 @@
 			<div class="about" id="about">
 				<h1>About</h1>
 
-				<p class="text-justify">I am a PhD student in the <a target="_blank" href="http://www.sysnet.ucsd.edu/sysnet/">Systems and Networking</a> group at the UC San Diego Computer Science and Engineering department. My advisor is <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. My current research goal is to enable active networking on programmable switches and fair sharing of switch hardware resources among active programs.</p>
+				<p class="text-justify">I am a PhD candidate, advised by <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>, in the <a target="_blank" href="http://www.sysnet.ucsd.edu/sysnet/">Systems and Networking</a> group at the UC San Diego Computer Science and Engineering department. My research is focused on enabling user-defined behavior on programmable switches using active networking [<a href="#paper-activermt">1</a>,<a href="#paper-activep4">2</a>].</p>
 
-				<p class="text-justify">In the past, I have worked on the <a target="_blank" href="https://circuit-switching.sysnet.ucsd.edu/">RotorNet</a> project and datacenter fault detection at UCSD. Prior to joining UCSD, I was a part of the <a target="_blank" href="https://www.microsoft.com/en-us/research/project/pindrop/"> PinDrop</a> project at Microsoft Research India where I worked on improving quality of service of real-time streaming applications in the context of Wide-Area Networks (WAN) and Wi-Fi networks. During my Masters program at IIT Kanpur, I worked on building educational technologies to help improve programming language education in University programs.</p>
+				<p class="text-justify">While at UCSD, I have also worked on datacenter fault detection [<a href="#paper-faults">4</a>] and the <a target="_blank" href="https://circuit-switching.sysnet.ucsd.edu/rotornet/">RotorNet</a> project [<a href="#paper-opera">3</a>]. Prior to joining UCSD, I was a part of the <a target="_blank" href="https://www.microsoft.com/en-us/research/project/pindrop/"> PinDrop</a> project at Microsoft Research India where I worked on improving quality of service of real-time streaming applications [<a href="#paper-kwikr">5</a>,<a href="#paper-via">6</a>]. During my Masters program at IIT Kanpur, I worked on building educational technologies for introductory programming courses [<a href="https://www.cse.iitk.ac.in/users/karkare/prutor/content/thesis.pdf">thesis</a>].</p>
 	
-				<p class="text-justify">You can access my CV <a target="_blank" href="docs/cv.pdf" target="_blank">here</a>.</p>
+				<!-- <p class="text-justify">You can access my CV <a target="_blank" href="docs/cv.pdf" target="_blank">here</a>.</p> -->
 			</div>
 
 			<hr>
 
 			<div class="text-justify" id="research">
-				<h1>Research</h1>
+				<h1>Current Research</h1>
 				<div>
-					<p>My current research involves building an <b>active networking</b> system which uses <b>RMT-based programmable switches</b> to run programs encoded inside network packets. The current prototype (written using the <a target="_blank" href="https://p4.org/">P4</a> programming language) is designed to run on a <a target="_blank" href="https://www.barefootnetworks.com/">Barefoot</a> Tofino switch ASIC. Multi-tenancy is supported along with resource isolation and dynamic adaptation of (memory and bandwidth) resources. Excess bandwidth is used to perform complex computation using packet re-circulations. Available memory is allocated among active applications based on pre-defined policies.</p>
-					<div class="text-center"><img src="img/activep4.png"></div>
-					<br>
-					<div class="text-center"><small><i><b>Figure:</b> System Abstraction</i></small></div>
+					<p>As a part of my ongoing work, I am building a system that enables user-defined behavior to be deployed within a programmable network by means of active networking. Programs encoded as code and data are embedded in network packets and subsequently decoded and executed on a <a target="_blank" href="https://www.intel.com/content/www/us/en/products/network-io/programmable-ethernet-switch/tofino-series.html">programmable switch</a>. Virtualized memory is dynamically split among applications and isolated at runtime [<a href="#paper-activermt">1</a>]. This research has also been supported by the <a href="https://opennetworking.org/news-and-events/blog/new-network-equipment-grant-program-from-intel-reduces-cost-of-university-networking-research/">Intel FFI</a> program.</p>
+					<!-- <div class="text-center"><img src="img/activep4.png"></div> -->
+					<!-- <br> -->
+					<!-- <div class="text-center"><small><i><b>Figure:</b> System Abstraction</i></small></div> -->
 				</div>
 			</div>
 
 			<hr>
 
 			<div class="text-justify" id="publications">
-				<h1>Publications</h1>
+				<h1>Selected Publications</h1>
 				<div class="publications">
-					<p>
+					<p id="paper-activermt">
+						<i>2023</i><br>
+						<b>Memory Management in ActiveRMT: Towards Runtime-programmable Switches</b><br>
+						<i>Rajdeep Das and Alex C. Snoeren. In Proceedings of the 2023 ACM SIGCOMM Conference (SIGCOMM '23). (to appear)</i>
+					</p>
+					<br>
+					<p id="paper-activep4">
 						<i>2020</i><br>
 						<b>Enabling Active Networking on RMT Hardware</b><br>
-						<i>Rajdeep Das and Alex C. Snoeren. In Proceedings of the 19th ACM Workshop on Hot Topics in Networks (HotNets '20). Association for Computing Machinery, Chicago, IL, USA. DOI: <a href="https://doi.org/10.1145/3422604.3425934">10.1145/3422604.3425934</a></i>
+						<i>Rajdeep Das and Alex C. Snoeren. In Proceedings of the 19th ACM Workshop on Hot Topics in Networks (HotNets '20). [<a href="https://doi.org/10.1145/3422604.3425934">Paper</a>]</i>
 					</p>
 					<br>
-					<p>
+					<p id="paper-opera">
 						<i>2020</i><br>
 						<b>Expanding across time to deliver bandwidth efficiency and low latency</b><br>
-						<i>William M. Mellette, Rajdeep Das, Yibo Guo, Rob McGuinness, Alex C. Snoeren, and George Porter. In 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20) (pp. 1–18). USENIX Association. <a href="https://www.usenix.org/system/files/nsdi20spring_mellette_prepub.pdf">[Paper]</a></i>
+						<i>William M. Mellette, Rajdeep Das, Yibo Guo, Rob McGuinness, Alex C. Snoeren, and George Porter. In 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20) (pp. 1–18). USENIX Association. <a href="https://www.usenix.org/system/files/nsdi20-paper-mellette.pdf">[Paper]</a></i>
 					</p>
 					<br>
-					<p>
+					<p id="paper-faults">
 						<i>2019</i><br>
 						<b>Understanding the Limits of Passive Realtime Datacenter Fault Detection and Localization</b><br>
-						<i>A. Roy, R. Das, H. Zeng, J. Bagga and A. C. Snoeren, "Understanding the Limits of Passive Realtime Datacenter Fault Detection and Localization," in IEEE/ACM Transactions on Networking, vol. 27, no. 5, pp. 2001-2014, Oct. 2019. DOI: <a target="_blank" href="https://doi.org/10.1109/TNET.2019.2938228">10.1109/TNET.2019.2938228</a></i>
+						<i>A. Roy, R. Das, H. Zeng, J. Bagga and A. C. Snoeren, "Understanding the Limits of Passive Realtime Datacenter Fault Detection and Localization," in IEEE/ACM Transactions on Networking, vol. 27, no. 5, pp. 2001-2014, Oct. 2019. [<a target="_blank" href="https://doi.org/10.1109/TNET.2019.2938228">Paper</a>]</i>
 					</p>
 					<br>
-					<p>
+					<p id="paper-kwikr">
 						<i>2017</i><br>
 						<b>Informed Bandwidth Adaptation in Wi-Fi Networks using Ping-Pair</b><br>
-						<i>Rajdeep Das, Nimantha Baranasuriya, Venkata N. Padmanabhan, Christoffer Rödbro, and Seth Gilbert. 2017. Informed Bandwidth Adaptation in Wi-Fi Networks using Ping-Pair. In Proceedings of the 13th International Conference on emerging Networking EXperiments and Technologies (CoNEXT '17). ACM, New York, NY, USA, 376-388. DOI: <a target="_blank" href="https://doi.org/10.1145/3143361.3143390">10.1145/3143361.3143390</a></i>
+						<i>Rajdeep Das, Nimantha Baranasuriya, Venkata N. Padmanabhan, Christoffer Rödbro, and Seth Gilbert. 2017. Informed Bandwidth Adaptation in Wi-Fi Networks using Ping-Pair. In Proceedings of the 13th International Conference on emerging Networking EXperiments and Technologies (CoNEXT '17). [<a target="_blank" href="https://doi.org/10.1145/3143361.3143390">Paper</a>]</i>
 					</p>
 					<br>
-					<p>
+					<p id="paper-via">
 						<i>2016</i><br>
 						<b>Via: Improving Internet Telephony Call Quality Using Predictive Relay Selection</b><br>
-						<i>Junchen Jiang, Rajdeep Das, Ganesh Ananthanarayanan, Philip A. Chou, Venkata Padmanabhan, Vyas Sekar, Esbjorn Dominique, Marcin Goliszewski, Dalibor Kukoleca, Renat Vafin, and Hui Zhang. 2016. Via: Improving Internet Telephony Call Quality Using Predictive Relay Selection. In Proceedings of the 2016 ACM SIGCOMM Conference (SIGCOMM '16). ACM, New York, NY, USA, 286-299. DOI: <a target="_blank" href="https://doi.org/10.1145/2934872.2934907">10.1145/2934872.2934907</a></i>
+						<i>Junchen Jiang, Rajdeep Das, Ganesh Ananthanarayanan, Philip A. Chou, Venkata Padmanabhan, Vyas Sekar, Esbjorn Dominique, Marcin Goliszewski, Dalibor Kukoleca, Renat Vafin, and Hui Zhang. 2016. Via: Improving Internet Telephony Call Quality Using Predictive Relay Selection. In Proceedings of the 2016 ACM SIGCOMM Conference (SIGCOMM '16). [<a target="_blank" href="https://doi.org/10.1145/2934872.2934907">Paper</a>]</i>
 					</p>
 					<br>
 					<div>A full list of publications can be found at my <a href="https://scholar.google.com/citations?user=QYaymG4AAAAJ&hl=en">Google Scholar profile</a>.</div>
