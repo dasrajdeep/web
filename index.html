@@ -36,6 +36,12 @@
 	<!-- Main -->
 	<link rel="stylesheet" href="css/main.css" />
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var img_width = window.innerWidth / 5 - 10;
+			$('#gallery img').css('width', img_width).css('height', img_width);
+		});
+	</script>
 </head>
 
 <body ng-app="d33p.in">
@@ -43,10 +49,11 @@
 
 		<div class="col-md-3">
 			<h2 class="text-right">
-				<div><img width="200px" height="200px" src="img/profile_pic_zoomed.jpg" class="img-rounded" style="margin-bottom: 20px"></div>
+				<div><img width="200px" height="200px" src="img/profile_pic_latest.jpeg" class="img-rounded" style="margin-bottom: 20px"></div>
 				<span>Rajdeep Das</span>
 				<br>
-				<small>r4das [at] ucsd [dot] edu</small>
+				<small>PhD Candidate @ UCSD</small>
+				<br>
 				<p class="address" style="margin-top: 30px">
 					EBU3B 3142 <br>
 					Department of Computer Science and Engineering <br>
@@ -65,6 +72,7 @@
 				<!-- <a class="social" href="https://github.com/dasrajdeep"><img src="img/icons/social-1_logo-github.svg" /></a> -->
 				<a class="social" href="https://www.linkedin.com/in/rajd33pd"><img src="img/icons/social-1_logo-linkedin.svg" /></a>
 			</div>
+			<br>
 		</div>
 
 		<div class="col-md-9 jumbotron">
@@ -72,29 +80,40 @@
 			<div class="about" id="about">
 				<h1>About</h1>
 
-				<p class="text-justify">I am a PhD candidate, advised by <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>, in the <a target="_blank" href="http://www.sysnet.ucsd.edu/sysnet/">Systems and Networking</a> group at the UC San Diego Computer Science and Engineering department. My research is focused on enabling user-defined behavior on programmable switches using active networking [<a href="#paper-activermt">1</a>,<a href="#paper-activep4">2</a>].</p>
+				<p class="text-justify">I am a PhD candidate at UCSD, advised by <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. I currently work on programmable switches [<a href="#paper-activermt">1</a>,<a href="#paper-activep4">2</a>]. My interests lie in the area of systems and networking. I will be graduating soon and on the job market.</p>
 
 				<p class="text-justify">While at UCSD, I have also worked on datacenter fault detection [<a href="#paper-faults">4</a>] and the <a target="_blank" href="https://circuit-switching.sysnet.ucsd.edu/rotornet/">RotorNet</a> project [<a href="#paper-opera">3</a>]. Prior to joining UCSD, I was a part of the <a target="_blank" href="https://www.microsoft.com/en-us/research/project/pindrop/"> PinDrop</a> project at Microsoft Research India where I worked on improving quality of service of real-time streaming applications [<a href="#paper-kwikr">5</a>,<a href="#paper-via">6</a>]. During my Masters program at IIT Kanpur, I worked on building a tutoring system for introductory programming courses [<a href="https://www.cse.iitk.ac.in/users/karkare/prutor/content/thesis.pdf">thesis</a>].</p>
-	
-				<!-- <p class="text-justify">You can access my CV <a target="_blank" href="docs/cv.pdf" target="_blank">here</a>.</p> -->
 			</div>
 
-			<hr>
+			<!-- <hr> -->
 
 			<div class="text-justify" id="research">
-				<h1>Current Research</h1>
+				<h1>Research</h1>
+				<h2><small>How can application-specific functionality be run on shared high-performance network switches?</small></h2>
 				<div>
-					<p>As a part of my ongoing work, I am building a system that enables user-defined behavior to be deployed within a programmable network by means of active networking. Programs encoded as code and data are embedded in network packets and subsequently decoded and executed on a <a target="_blank" href="https://www.intel.com/content/www/us/en/products/network-io/programmable-ethernet-switch/tofino-series.html">programmable switch</a>. Virtualized memory is dynamically split among applications and isolated at runtime [<a href="#paper-activermt">1</a>]. This research has also been supported by the <a href="https://opennetworking.org/news-and-events/blog/new-network-equipment-grant-program-from-intel-reduces-cost-of-university-networking-research/">Intel FFI</a> program.</p>
-					<!-- <div class="text-center"><img src="img/activep4.png"></div> -->
+					<p>As a part of my dissertation, I am building systems that enable deployment of user-defined behavior within a programmable network using active networking. My recent paper [<a href="#paper-activermt">1</a>] describes <b>ActiveRMT</b> - an user-driven approach to deploying functionality over the network using programs that are embedded in network packets and subsequently decoded and executed on a <a target="_blank" href="https://www.intel.com/content/www/us/en/products/network-io/programmable-ethernet-switch/tofino-series.html">programmable switch</a>. On-chip memory is virtualized and dynamically split among applications at runtime. 
+					<div class="text-center">
+						<div class="col-md-6">
+							<b>Current Approach (using P4)</b>
+							<img src="img/research/inc_p4.png">
+						</div>
+						<div class="col-md-6">
+							<b>ActiveRMT</b>
+							<img src="img/research/inc_armt.png">
+						</div>
+					</div>
+					<div class="clearfix"></div>
+						
+					This research has also been supported by the <a href="https://opennetworking.org/news-and-events/blog/new-network-equipment-grant-program-from-intel-reduces-cost-of-university-networking-research/">Intel FFI</a> program.</p>
 					<!-- <br> -->
 					<!-- <div class="text-center"><small><i><b>Figure:</b> System Abstraction</i></small></div> -->
 				</div>
 			</div>
 
-			<hr>
+			<!-- <hr> -->
 
 			<div class="text-justify" id="publications">
-				<h1>Selected Publications</h1>
+				<h1><small>Selected Publications</small></h1>
 				<div class="publications">
 					<p id="paper-activermt">
 						<i>2023</i><br>
@@ -136,11 +155,31 @@
 						<i>Junchen Jiang, Rajdeep Das, Ganesh Ananthanarayanan, Philip A. Chou, Venkata Padmanabhan, Vyas Sekar, Esbjorn Dominique, Marcin Goliszewski, Dalibor Kukoleca, Renat Vafin, and Hui Zhang. 2016. Via: Improving Internet Telephony Call Quality Using Predictive Relay Selection. In Proceedings of the 2016 ACM SIGCOMM Conference (SIGCOMM '16). [<a target="_blank" href="https://doi.org/10.1145/2934872.2934907">Paper</a>]</i>
 					</p>
 					<br>
-					<div>A full list of publications can be found at my <a href="https://scholar.google.com/citations?user=QYaymG4AAAAJ&hl=en">Google Scholar profile</a>.</div>
+					<div>A full list of publications can be found on my <a href="https://scholar.google.com/citations?user=QYaymG4AAAAJ&hl=en">Google Scholar profile</a>.</div>
 				</div>
 			</div>
+
+			<hr>
+
+			<div id="outdoors">
+				<img src="img/cycling_jersey.jpeg" width="200px">
+				<img src="img/gallery/IMG_0562.HEIC" width="200px" height="200px" class="img-circle pull-right" style="margin: 10px;">
+				<img src="img/gallery/IMG_20200815_094158.jpg" width="200px" height="200px" class="img-circle pull-right" style="margin: 10px;">
+				<img src="img/gallery/PXL_20210519_124130511.jpg" width="200px" height="200px" class="img-circle pull-right" style="margin: 10px;">
+				<p>What I do in my spare time ... </p>
+				<i style="font-size: medium;" class="pull-right">Road Cycling . Hiking . Rock Climbing . Mountain Biking</i>
+			</div>
+
+			<div class="clearfix"></div>
 		</div>
 	</div>
+	<!-- <div id="gallery" class="col-md-12 text-center" style="margin: 0%; padding: 0%;">
+		<img src="img/gallery/outdoors/IMG_1131.jpeg" width="200px" height="200px">
+		<img src="img/gallery/outdoors/IMG_0562.HEIC" width="19%">
+		<img src="img/gallery/outdoors/IMG_0669.HEIC" width="19%">
+		<img src="img/gallery/outdoors/IMG_20191229_130533.jpg" width="19%">
+		<img src="img/gallery/outdoors/IMG_20200815_112711.jpg" width="19%">
+	</div> -->
 </body>
 
 </html>
