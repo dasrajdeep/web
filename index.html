@@ -49,7 +49,7 @@
 
 		<div class="col-md-3">
 			<h2 class="text-right">
-				<div><img width="200px" height="200px" src="img/profile_pic_latest.jpeg" class="img-rounded" style="margin-bottom: 20px"></div>
+				<div><img width="200px" height="200px" src="img/profile_pic_zoomed.jpg" class="img-rounded" style="margin-bottom: 20px"></div>
 				<span>Rajdeep Das</span>
 				<br>
 				<small>PhD Candidate @ UCSD</small>
@@ -80,7 +80,7 @@
 			<div class="about" id="about">
 				<h1>About</h1>
 
-				<p class="text-justify">I am a PhD candidate at UCSD, advised by <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. I currently work on programmable switches [<a href="#paper-activermt">1</a>,<a href="#paper-activep4">2</a>]. My interests lie in the area of systems and networking. I will be graduating soon and on the job market.</p>
+				<p class="text-justify">I am a final year PhD sudent at UCSD, advised by <a target="_blank" href="http://cseweb.ucsd.edu/~snoeren/">Prof. Alex Snoeren</a>. I currently work on enabling user-defined programmable switches [<a href="#paper-activermt">1</a>,<a href="#paper-activep4">2</a>]. My interests lie in the area of systems and networking. I will be graduating soon and on the job market (you can find my CV <a href="/docs/cv.pdf">here</a>).</p>
 
 				<p class="text-justify">While at UCSD, I have also worked on datacenter fault detection [<a href="#paper-faults">4</a>] and the <a target="_blank" href="https://circuit-switching.sysnet.ucsd.edu/rotornet/">RotorNet</a> project [<a href="#paper-opera">3</a>]. Prior to joining UCSD, I was a part of the <a target="_blank" href="https://www.microsoft.com/en-us/research/project/pindrop/"> PinDrop</a> project at Microsoft Research India where I worked on improving quality of service of real-time streaming applications [<a href="#paper-kwikr">5</a>,<a href="#paper-via">6</a>]. During my Masters program at IIT Kanpur, I worked on building a tutoring system for introductory programming courses [<a href="https://www.cse.iitk.ac.in/users/karkare/prutor/content/thesis.pdf">thesis</a>].</p>
 			</div>
@@ -89,9 +89,9 @@
 
 			<div class="text-justify" id="research">
 				<h1>Research</h1>
-				<h2><small>How can application-specific functionality be run on shared high-performance network switches?</small></h2>
+				<h2><small>How can application-specific functionality be run on shared high-performance programmable switches?</small></h2>
 				<div>
-					<p>As a part of my dissertation, I am building systems that enable deployment of user-defined behavior within a programmable network using active networking. My recent paper [<a href="#paper-activermt">1</a>] describes <b>ActiveRMT</b> - an user-driven approach to deploying functionality over the network using programs that are embedded in network packets and subsequently decoded and executed on a <a target="_blank" href="https://www.intel.com/content/www/us/en/products/network-io/programmable-ethernet-switch/tofino-series.html">programmable switch</a>. On-chip memory is virtualized and dynamically split among applications at runtime. 
+					<p>As a part of my dissertation, I am building systems that enable deployment of user-defined behavior within a programmable network using active networking. My recent paper [<a href="#paper-activermt">1</a>] describes <b>ActiveRMT</b> - an user-driven approach to deploying functionality over a <a target="_blank" href="https://www.intel.com/content/www/us/en/products/network-io/programmable-ethernet-switch/tofino-series.html">programmable switch</a> using capsule-based active networking, enabling multi-tenancy and runtime provisioning of application offloads.</p>
 					<div class="text-center">
 						<div class="col-md-6">
 							<b>Current Approach (using P4)</b>
@@ -103,10 +103,10 @@
 						</div>
 					</div>
 					<div class="clearfix"></div>
-						
-					This research has also been supported by the <a href="https://opennetworking.org/news-and-events/blog/new-network-equipment-grant-program-from-intel-reduces-cost-of-university-networking-research/">Intel FFI</a> program.</p>
-					<!-- <br> -->
-					<!-- <div class="text-center"><small><i><b>Figure:</b> System Abstraction</i></small></div> -->
+					<p>In addition, I am attempting to enable deployment of "passive" network functions using ActiveRMT, democratizing "processing bandwidth".</p>
+					<br>
+					<i class="small">*This research is supported by <a href="https://opennetworking.org/news-and-events/blog/new-network-equipment-grant-program-from-intel-reduces-cost-of-university-networking-research/">Intel</a> and Cisco.</i>
+					</p>
 				</div>
 			</div>
 
@@ -162,11 +162,12 @@
 			<hr>
 
 			<div id="outdoors">
+				<p>(Other Activities)</p>
 				<img src="img/cycling_jersey.jpeg" width="200px">
 				<img src="img/gallery/IMG_0562.HEIC" width="200px" height="200px" class="img-circle pull-right" style="margin: 10px;">
 				<img src="img/gallery/IMG_20200815_094158.jpg" width="200px" height="200px" class="img-circle pull-right" style="margin: 10px;">
 				<img src="img/gallery/PXL_20210519_124130511.jpg" width="200px" height="200px" class="img-circle pull-right" style="margin: 10px;">
-				<p>What I do in my spare time ... </p>
+				<br>
 				<i style="font-size: medium;" class="pull-right">Road Cycling . Hiking . Rock Climbing . Mountain Biking</i>
 			</div>
 
